@@ -1,5 +1,10 @@
+
+const doesArrayContainCoins = (coins) => {
+  return !coins || coins.length === 0;
+}
+
 exports.getNonConstructibleChange = (coins) => {
-  if (!coins || coins.length === 0) {
+  if (doesArrayContainCoins(coins)) {
     return 0;
   }
   return null;
