@@ -1,5 +1,5 @@
 exports.getNonConstructibleChange = (coins) => {
-  if (coins.lenght === 0) {
+  if (!coins || coins.length === 0) {
     return 0;
   }
   return null;
