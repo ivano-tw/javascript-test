@@ -1,3 +1,6 @@
 exports.getNonConstructibleChange = (coins) => {
-  return 0;
+  if (coins.lenght === 0) {
+    return 0;
+  }
+  return null;
 }
