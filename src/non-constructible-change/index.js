@@ -1,6 +1,6 @@
 const sortCoinsByValue = (coins) => {
   const copiedCoins = [...coins];
-  return copiedCoins.sort();
+  return copiedCoins.sort((a, b) => a - b);
 }
 
 const doesArrayContainCoins = (coins) => {
