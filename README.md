@@ -29,9 +29,11 @@ It uses this test case to run:
 ``` array = [5, 7, 1, 1, 2, 3, 22] ```
 
 It can be run using the next script:
+
 ``` yarn run:change ```
 
 The project has unit tests that can be run using the next script:
+
 ``` yarn test:change ```
 
 ### Sorted squared array
