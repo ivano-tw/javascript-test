@@ -5,6 +5,7 @@
   "scripts": {
     "run": "node ./src/index.js",
     "run:change": "node ./src/index.js change",
+    "run:sorted": "node ./src/index.js sorted",
     "test": "jest",
     "test:change": "jest ./__tests__/non-constructible-change/*",
     "test:squared": "jest ./__tests__/sorted-squared-array/*"
