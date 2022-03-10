@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "node ./src/index.js",
-    "test": "jest"
+    "run": "node ./src/index.js",
+    "run:change": "node ./src/index.js change",
+    "test": "jest",
+    "test:change": "jest ./__tests__/non-constructible-change/*"
   },
   "devDependencies": {
     "jest": "^27.5.1"
