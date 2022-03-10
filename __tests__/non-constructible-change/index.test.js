@@ -14,9 +14,15 @@ describe("Non constructible change", () => {
     expect(minimumConstructibleChange).toBe(0);
   });
 
-  it('Returns minimum constructible change', () => {
+  it('Returns minimum constructible change case 1', () => {
     const coins = [5, 7, 1, 1, 2, 3, 22];
     const minimumConstructibleChange = getNonConstructibleChange(coins);
     expect(minimumConstructibleChange).toBe(20);
+  });
+
+  it('Returns minimum constructible change case 2', () => {
+    const coins = [1, 1, 1, 1, 1];
+    const minimumConstructibleChange = getNonConstructibleChange(coins);
+    expect(minimumConstructibleChange).toBe(6);
   });
 });

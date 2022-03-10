@@ -10,7 +10,7 @@ const doesArrayContainCoins = (coins) => {
 }
 
 const getCoinsLowerThanChange = (change, coins) => {
-  let lastLowerCoinIndex = 0;
+  let lastLowerCoinIndex = coins.length;
   for (let index = 0; index < coins.length; index++) {
     if (coins[index] > change) {
       lastLowerCoinIndex = index;
