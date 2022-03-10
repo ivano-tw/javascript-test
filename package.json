@@ -6,7 +6,8 @@
     "run": "node ./src/index.js",
     "run:change": "node ./src/index.js change",
     "test": "jest",
-    "test:change": "jest ./__tests__/non-constructible-change/*"
+    "test:change": "jest ./__tests__/non-constructible-change/*",
+    "test:squared": "jest ./__tests__/sorted-squared-array/*"
   },
   "devDependencies": {
     "jest": "^27.5.1"
