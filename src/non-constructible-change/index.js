@@ -1,3 +1,5 @@
+const { canChangeBeCalculated } = require("./change");
+
 const sortCoinsByValue = (coins) => {
   const copiedCoins = [...coins];
   return copiedCoins.sort((a, b) => a - b);
@@ -24,5 +26,19 @@ exports.getNonConstructibleChange = (coins) => {
     return 0;
   }
   const sortedCoins = sortCoinsByValue(coins);
-  return null;
+  let nonConstructibleChange = null;
+  let currentChange = 1;
+  do {
+    if (sortedCoins.indexOf(currentChange) >= 0) {
+      currentChange++;
+      continue;
+    }
+    const validCoinsForChange = getCoinsLowerThanChange(currentChange, sortedCoins);
+    const isChangeCalculated = canChangeBeCalculated(currentChange, validCoinsForChange);
+    if (!isChangeCalculated) {
+      nonConstructibleChange = currentChange;
+    }
+    currentChange++;
+  } while (!nonConstructibleChange);
+  return nonConstructibleChange;
 }
